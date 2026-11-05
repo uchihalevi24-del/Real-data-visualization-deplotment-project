@@ -57,8 +57,8 @@ top10_countries = (
     .reset_index(name='count')
 )
 
-st.plotly_chart(px.bar(top10_countries,x='index',y='count'
-       ,labels={'index':'Country','count':'Repetitions'}
+st.plotly_chart(px.bar(top10_countries,x='country',y='count'
+       ,labels={'country':'Country','count':'Repetitions'}
        ,template='plotly_dark'
        ,color_continuous_scale='Emrld'
        ,color='count'
