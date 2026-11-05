@@ -11,7 +11,7 @@ DATA_PATH = BASE_DIR / "Netflix_cleaned_dataset.csv"
 
 df = pd.read_csv(DATA_PATH)
 
-st.set_page_config('Statics 📈')
+st.set_page_config('Statistics 📈')
 
 
 st.markdown('<h3 style="background-color:lightgray ; color: darkgreen ;">A chart for distribution of the age rating :</h3>',unsafe_allow_html=True)
