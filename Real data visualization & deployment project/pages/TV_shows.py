@@ -17,9 +17,15 @@ st.markdown('<h3 style="background-color:lightgray ; color: darkblue ;">A chart 
 
 st.divider()
 
-shows_durations =  df[df['duration_unit'].str.contains('Season', na=False)].duration_value.value_counts().reset_index().sort_values(by='count')
-
-st.plotly_chart(px.histogram(shows_durations,x='duration_value' , y='count'
+shows_durations = (
+    df[df['duration_unit'].str.contains('Season', na=False)]
+    ['duration_value']
+    .value_counts()
+    .rename_axis('duration_value')
+    .reset_index(name='count')
+    .sort_values(by='count')
+)
+st.plotly_chart(px.bar(shows_durations,x='duration_value' , y='count'
        ,template='plotly_dark'
        ,labels={'duration_value' : 'Show sesons' , 'count' : 'Counts'}
        ,color='count'
