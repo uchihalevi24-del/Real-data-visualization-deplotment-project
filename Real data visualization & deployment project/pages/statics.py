@@ -53,7 +53,7 @@ countries = (
     .dropna()
     .str.split(',')
     .explode()
-    .str.strip()
+    .str.strip(" []'\"")
 )
 
 top10_countries = (
