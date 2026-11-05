@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-df = pd.read_csv(r'Netflix_cleaned_dataset.csv')
+df = pd.read_csv('Netflix_cleaned_dataset.csv')
 
 st.set_page_config('Home 🏠')
 
