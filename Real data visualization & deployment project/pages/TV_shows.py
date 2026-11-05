@@ -19,10 +19,9 @@ st.divider()
 
 shows_durations =  df[df['duration_unit'].str.contains('Season', na=False)].duration_value.value_counts().reset_index().sort_values(by='count')
 
-st.plotly_chart(px.bar(shows_durations,x='duration_value' , y='count'
-       ,title='Durations of the TV shows distribution : '
+st.plotly_chart(px.histogram(shows_durations,x='duration_value' , y='count'
        ,template='plotly_dark'
-       ,labels={'duration_value' : 'Show duration' , 'count' : 'Counts'}
+       ,labels={'duration_value' : 'Show sesons' , 'count' : 'Counts'}
        ,color='count'
        ,color_continuous_scale='Tealgrn')
 )
