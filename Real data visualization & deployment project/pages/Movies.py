@@ -19,6 +19,5 @@ st.divider()
 movies_durations =  df[df['duration_unit'].str.contains('Minute', na=False)].duration_value.value_counts().reset_index().sort_values(by='count')
 
 st.plotly_chart(px.box(movies_durations , x = 'duration_value'
-       , title = 'Movies durations distribution : '
        ,template='simple_white'
-       ,labels={'duration_value' : 'Movie duration'}))
+       ,labels={'duration_value' : 'Movie duration in minutes'}))
