@@ -20,7 +20,7 @@ st.divider()
 
 type_counting = df.type.value_counts().reset_index()
 
-st.plotly_chart(px.pie(type_counting,
+st.plotly_chart(px.pie(type_counting
        ,names='type'
        ,values='count'
        ,template='ggplot2'
