@@ -48,11 +48,14 @@ st.markdown('<h3 style="background-color:lightgray ; color: darkgreen ;">A chart
 
 st.divider()
 
-countries = []
-for country in df.country:
-        countries += country
+countries = df['country'].dropna().str.split(', ').explode().str.strip()
 
-top10_countries = pd.Series(countries).value_counts().reset_index().sort_values(by='count',ascending=False).head(10)
+top10_countries = (
+    countries.value_counts()
+    .head(10)
+    .rename_axis('country')
+    .reset_index(name='count')
+)
 
 st.plotly_chart(px.bar(top10_countries,x='index',y='count'
        ,labels={'index':'Country','count':'Repetitions'}
