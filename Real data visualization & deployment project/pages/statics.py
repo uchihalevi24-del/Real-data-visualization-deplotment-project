@@ -1,9 +1,14 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-import calendar
+import calendarfrom pathlib import Path
 
-df = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\Programming\Eng Mohammed\Real data visualization & deployment project\Netflix_cleaned_dataset.csv')
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATA_PATH = BASE_DIR / "Netflix_cleaned_dataset.csv"
+
+df = pd.read_csv(DATA_PATH)
 
 st.set_page_config('Statics 📈')
 
