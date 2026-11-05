@@ -1,8 +1,12 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from pathlib import path
 
-df = pd.read_csv('Netflix_cleaned_dataset.csv')
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "Netflix_cleaned_dataset.csv"
+
+df = pd.read_csv(DATA_PATH)
 
 st.set_page_config('Home 🏠')
 
