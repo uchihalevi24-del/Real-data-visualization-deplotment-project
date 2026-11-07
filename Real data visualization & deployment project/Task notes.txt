@@ -1,4 +1,0 @@
-streamlit pages
-professional readme 
-
-lottifiles : how to put the animation right into your streamlit
