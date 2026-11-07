@@ -23,7 +23,8 @@ insights = st.button(label='Go to the insights')
 
 if insights :
     st.snow()
-    st.switch_page('pages/Insights.py')
+    st.success('Done!')
+    # st.switch_page('pages/Insights.py')
     
 
 
