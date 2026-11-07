@@ -18,7 +18,11 @@ st.dataframe(df.head(8))
 
 st.divider()
 
-st.link_button(label='Go to the insights' , url='youtube.com')
+insights = st.button(label='Go to the insights')
+
+if insights :
+    st.switch_page('pages/Insights.py')
+
 
 st.divider()
 
