@@ -19,7 +19,7 @@ st.dataframe(df.head(8))
 
 st.divider()
 
-insights = st.button('Go to insights : ')
+insights = st.button(label='Go to the insights')
 
 if insights :
     st.snow()
