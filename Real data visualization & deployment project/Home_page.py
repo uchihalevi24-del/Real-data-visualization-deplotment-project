@@ -22,6 +22,7 @@ insights = st.button(label='Go to the insights')
 
 if insights :
     st.switch_page('pages/Insights.py')
+    st.snow()
 
 
 st.divider()
