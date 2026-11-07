@@ -3,6 +3,7 @@ import plotly.express as px
 import streamlit as st
 from pathlib import Path
 
+
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "Netflix_cleaned_dataset.csv"
 
@@ -18,7 +19,7 @@ st.dataframe(df.head(8))
 
 st.divider()
 
-insights = st.button(label='Go to the insights')
+
 
 if insights :
     st.snow()
