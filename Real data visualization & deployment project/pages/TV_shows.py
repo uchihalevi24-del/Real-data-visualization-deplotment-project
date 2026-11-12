@@ -27,7 +27,7 @@ shows_durations = (
 )
 st.plotly_chart(px.bar(shows_durations,x='duration_value' , y='count'
        ,template='plotly_dark'
-       ,labels={'duration_value' : 'Show sesons' , 'count' : 'Counts'}
+       ,labels={'duration_value' : 'Show seasons' , 'count' : 'Counts'}
        ,color='count'
        ,color_continuous_scale='Tealgrn')
 )
