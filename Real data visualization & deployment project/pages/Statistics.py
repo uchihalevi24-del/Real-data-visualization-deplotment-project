@@ -20,11 +20,13 @@ st.divider()
 
 type_counting = df.type.value_counts().reset_index()
 
-st.plotly_chart(px.pie(type_counting
+st.plotly_chart(px.pie(type_counting,title='Movies and TV Shows added number :'
        ,names='type'
        ,values='count'
        ,template='ggplot2'
-       ,hole=0))
+       ,hole=0
+       ).update_layout(showlegend = False).update_traces(textposition = 'inside',textinfo = 'label+percent'))
+
 
 
 st.divider()
