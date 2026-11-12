@@ -9,7 +9,7 @@ DATA_PATH = BASE_DIR / "Netflix_cleaned_dataset.csv"
 
 df = pd.read_csv(DATA_PATH)
 
-st.set_page_config('Home',page_icon='🏠' , layout='centered')
+st.set_page_config('Home',page_icon='🏠' )
 
 with st.sidebar:
     st.title('Filters :' , help='This will filter all the pages')
